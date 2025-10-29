@@ -1,0 +1,57 @@
+1. Install Jenkins in Ubuntu machines using commands
+
+-----update system packages -----
+sudo apt update
+
+sudo apt upgrade -y
+
+-------Install java (Jenkins requires java)-------
+sudo apt install fontconfig openjdk-17-jre -y
+
+-------verify java version------
+java -version
+
+-------Add Jenkins repository -------
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+
+
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+------Install Jenkins ------
+sudo apt update
+
+sudo apt install Jenkins -y
+
+
+--------check Jenkins status ------
+sudo systemctl status Jenkins
+
+-------- configure security group -------
+
+In your AWS EC2 console, add an inbound rule to your security group:
+- Type: Custom TCP
+- Port: 8080
+- Source: Your IP or 0.0.0.0/0 (for testing)
+
+## 7. Access Jenkins
+Open your browser and navigate to:
+```
+http://your-ec2-public-ip:8080
+
+-----next Jenkins web page will open------ 
+copy the path initialAdminPassword path and open in your ec2 machine and cd that path. after that by using cat command open the password and copy that 
+password and paste into Jenkins webpage
+
+Install required or suggested plugins and setup your user and password for jenkins
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Git Installtion
+
+
+
+
