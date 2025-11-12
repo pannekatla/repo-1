@@ -1,0 +1,101 @@
+# Terraform Files
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files - contain sensitive infrastructure state
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files, which may contain sensitive data
+*.tfvars
+*.tfvars.json
+
+# Ignore override files as they are usually used to override resources locally
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Terraform plan output files
+*.tfplan
+
+# Terraform lock file (optional - some teams commit this)
+# .terraform.lock.hcl
+
+
+# Ansible Files
+# Ansible retry files
+*.retry
+
+# Ansible vault password files
+.vault_pass
+.vault_password
+vault_pass.txt
+*vault*.key
+
+# Ansible facts cache
+facts.d/
+*.fact
+
+# Ansible inventory files with sensitive data (if applicable)
+# inventory/production
+# hosts.ini
+
+# Ansible log files
+*.log
+
+# Ansible collection builds
+*.tar.gz
+
+
+# General Development Files
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor and IDE files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.iml
+
+# Python (for Ansible modules or scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# SSH keys (if accidentally placed in repo)
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+
+# Environment variables
+.env
+.env.local
+
+# Backup files
+*.bak
+*.backup
+*.old
